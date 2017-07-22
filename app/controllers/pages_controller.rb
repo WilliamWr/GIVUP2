@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def orgnew
+  end
+
   def profile
     if (User.find_by_username(params[:id]))
       @username = params[:id]
