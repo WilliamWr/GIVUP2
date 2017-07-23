@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= form_tag(events_path, method: :get) do %>
   <%= text_field_tag :term, params[:term] %>
   <%= submit_tag 'Search', name: nil %>
@@ -32,3 +33,44 @@
        </tr>
     </tbody>
   </table>
+=======
+
+<p id="notice"><%= notice %></p>
+
+<h1>Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.title %></td>
+        <td><%= event.description %></td>
+        <td><%= event.start %></td>
+        <td><%= event.end %></td>
+        <td><%= event.address %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% unless event.user_events.map(&:user_id).include?(current_user.id) %>
+          <td><%= link_to 'Join', join_path(user_id: current_user.id, event_id: event.id),method: :post %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>
+>>>>>>> d711e9630217b20364a032fd04af48598d70ebac
