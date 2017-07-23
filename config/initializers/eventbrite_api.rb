@@ -1,1 +1,1 @@
-Eventbrite.token = 'JXDLZXU54XZ36ZRBE7VS'
+# Eventbrite.token = 'JXDLZXU54XZ36ZRBE7VS'
