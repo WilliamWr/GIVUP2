@@ -23,7 +23,12 @@
     <div class="panel panel-default">
       <div class="panel-body">
     <p>My Account</p>
+    <% @user_events.each do |ue|%>
+      <h1>Event: <%= ue.event.title%></h1>
+      <%= ue.hours %>
+    <% end %>
     </div>
+    Total: <%= current_user.hours %>
 </div>
 
   </div>

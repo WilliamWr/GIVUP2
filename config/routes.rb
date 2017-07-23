@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   resources :events
-  root 'events#index'
+  root 'pages#index'
 
+
+  get '/create' => 'events#index'
   get '/home' => 'pages#home'
+
+  post '/join' => 'events#join', as: :join
+  post '/verified_hours' => 'events#verified_hours', as: :verified_hours
 
   # get '/orgnew' => 'registrations#orgnew'
 

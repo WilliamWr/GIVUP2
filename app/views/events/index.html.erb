@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <h1>Events</h1>
@@ -25,6 +26,9 @@
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% unless event.user_events.map(&:user_id).include?(current_user.id) %>
+          <td><%= link_to 'Join', join_path(user_id: current_user.id, event_id: event.id),method: :post %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

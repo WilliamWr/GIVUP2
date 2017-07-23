@@ -34,3 +34,12 @@
 
   </div>
 </div>
+
+<% @user_events.includes(:user_events).each do |event| %>
+  <h4>Event <strong><%= event.title %></strong></h4>
+  <% event.user_events.each do |ue| %>
+    username: <strong><%= ue.user.username %></strong>
+    <%= link_to 'Accept', verified_hours_path(event_id: event.id, user_id: ue.user.id), method: :post %>
+  <% end %>
+  <hr>
+<%end %>

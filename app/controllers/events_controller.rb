@@ -22,6 +22,30 @@ class EventsController < ApplicationController
   def edit
   end
 
+  def join
+    user_event = UserEvent.new
+    user_event.user_id = params[:user_id]
+    user_event.event_id = params[:event_id]
+    user_event.save
+    redirect_to '/create'
+  end
+
+  def verified_hours
+    user = User.find_by(id: params[:user_id])
+    event = Event.find_by(id: params[:event_id])
+    user_event = UserEvent.where(user_id: user.id, event_id: event.id).first
+
+    hours = event.end - event.start
+    hours = Time.at(hours).strftime("%H:%M:%S").split(":")[0]
+    user_event.hours = hours.to_i
+    user_event.save
+
+    user.is_verified = true
+    user.hours = user.hours.to_i + hours.to_i
+    user.save
+    redirect_to "/user/#{user.username}"
+  end
+
   # POST /events
   # POST /events.json
   def create
