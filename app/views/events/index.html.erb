@@ -1,4 +1,33 @@
+<%= form_tag(events_path, method: :get) do %>
+ <%= text_field_tag :term, params[:term] %>
+ <%= submit_tag 'Search', name: nil %>
+<% end %>
+<table>
+   <thead>
+     <tr>
+       <th></th>
+     </tr>
+   </thead>
 
+   <tbody>
+     <tr>
+       <% for event in @events %>
+       <td><%= event.description %></td>
+      <td><%= event.start %></td>
+      <td><%= event.end %></td>
+         <div class='events'>
+           <!-- <%#= event%> -->
+             <strong> <%= event['title'] %> </strong>
+
+         </div>
+         <%#= link_to 'Edit', edit_task_path(task) %>
+       <% end %>
+       <td><%= event.description %></td>
+      <td><%= event.start %></td>
+      <td><%= event.end %></td>
+      </tr>
+   </tbody>
+ </table>
 <p id="notice"><%= notice %></p>
 
 <h1>Events</h1>

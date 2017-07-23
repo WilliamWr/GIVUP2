@@ -4,8 +4,28 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    # @event = Eventbrite::Event.search({q: 'Community Service'})
     @events = Event.all
+#     if params[:term].present?
+# @events = Eventbrite::Event.search({q: params[:term]}).events
+# else
+# @events = Eventbrite::Event.search({q: 'Miami'}).events
+# end
+    # @event = Eventbrite::Event.search({q: 'Community Service'})
+    # @events = Eventbrite::Event.search({q: params[:term]}).events
+    # @events = Event.all
+ #    @events = if params[:term]
+ #   Event.where('name LIKE ?', "%#{params[:term]}%")
+ # else
+ #   Event.all
+ # end
+
+
+    # @events = if params[:term]
+ # Event.where('name LIKE ?', "%#{params[:term]}%")
+
+
+
+
   end
 
   # GET /events/1
@@ -36,7 +56,7 @@ class EventsController < ApplicationController
     user_event = UserEvent.where(user_id: user.id, event_id: event.id).first
 
     hours = event.end - event.start
-    hours = Time.at(hours).strftime("%H:%M:%S").split(":")[0]
+    # hours = Time.at(hours).strftime("%H:%M:%S").split(":")[0]
     user_event.hours = hours.to_i
     user_event.save
 
@@ -84,6 +104,9 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  def event_params
+ params.require(:event).permit(:name, :term)
   end
 
   private

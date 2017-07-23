@@ -22,13 +22,13 @@
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
-    <p>My Account</p>
+    <h4><%= current_user.username %></h4>
     <% @user_events.each do |ue|%>
-      <h1>Event: <%= ue.event.title%></h1>
-      <%= ue.hours %>
+      <h5>Event: <%= ue.event.title%></h5>
+      <h5> Hours: <%= ue.hours %> </h5>
     <% end %>
     </div>
-    Total: <%= current_user.hours %>
+  <H4>Total: <%= current_user.hours %> </h4>
 </div>
 
   </div>
