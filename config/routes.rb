@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :events
   root 'pages#index'
 
-
+  get '/explore' => 'events#explore'
   get '/create' => 'events#index'
   get '/home' => 'pages#home'
 
