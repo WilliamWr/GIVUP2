@@ -36,6 +36,13 @@
     <div class="panel panel-default">
       <div class="panel-body">
     <p>What am I doing?</p>
+    <% @user_events.each do |ue|%>
+      <p>I completed <%= ue.event.title%>. </p>
+      <h5> Hours: <%= ue.hours %> </h5>
+    <% end %>
+    </div>
+
+
   </div>
 </div>
   </div>

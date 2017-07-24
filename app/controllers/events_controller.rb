@@ -57,6 +57,7 @@ class EventsController < ApplicationController
 
     hours = event.end - event.start
     # hours = Time.at(hours).strftime("%H:%M:%S").split(":")[0]
+    hours = hours / 3600
     user_event.hours = hours.to_i
     user_event.save
 
