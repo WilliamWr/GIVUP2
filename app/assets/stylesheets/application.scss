@@ -19,3 +19,52 @@
 body {
   background-color: lightblue;
 }
+#givup {
+	width: 481px;
+	height: 195px;
+  margin: 0 auto;
+	font-family: lazer84;
+	font-size: 144px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #fd2ec4;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#givup .text-style-1 {
+	font-size: 174px;
+}
+
+input[type=submit]{
+  border: 0;
+  color: white;
+  width: 297px;
+	height: 42px;
+	background-color: #4f94c1;
+}
+
+.form {
+  text-align: center
+}
+
+.input {
+  /* Rectangle 2: */
+  width: 297px;
+	height: 42px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  /* Username: */
+  font-family: PTSans-Caption;
+  font-size: 20px;
+  color: rgba(0,0,0,0.50);
+  }
+
+.combined-shape {
+
+	background-color: rgba(95, 97, 117, 0.69);
+	box-shadow: 0 0 25px 0 rgba(58, 75, 120, 0.78), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}

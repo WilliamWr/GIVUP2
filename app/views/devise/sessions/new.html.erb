@@ -1,26 +1,38 @@
-<h2>Log in</h2>
+<style>
+body {
+	background-image: url(https://image.ibb.co/kyPjqQ/JzfvVHJ.jpg);
+	background-color: rgba(84, 90, 94, 0.29);
+	box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}
 
+</style>
+<div class="combined-shape">
+  <p id="givup">GivUp</p>
+<div class="form">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: 'input' %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: 'input' %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
-    </div>
+
   <% end -%>
 
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
+  </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+	</div>
+</div>
