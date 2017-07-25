@@ -1,71 +1,64 @@
+<!-- row 1 -->
 <div class="row">
   <div class="col-xs-12">
     <div class="jumbotron">
-      <%= current_user.username %>
-      <!-- <%= User.find_by_username(params[:id]).username %> -->
-      <!-- <%= render "components/follow_button", :user => User.find_by_username(params[:id]) %> -->
-
-
-    </div>
-
-
-
-
-  </div>
-</div>
-
-
-
-
+<!--
 
 <!-- row 2 -->
+
 
 <div class="row">
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
+
     <h4><%= current_user.username %></h4>
     <%= render "components/follow_button", :user => User.find_by_username(params[:id]) %>
     <% @user_events.each do |ue|%>
       <h5>Event: <%= ue.event.title%></h5>
       <h5> Hours: <%= ue.hours %> </h5>
     <% end %>
+
+        <div class="hrs_title">
+          <h4>Achieved Hours</h4>
+        </div>
+        <!-- <h4><%= current_user.username %></h4>
+        <% @user_events.each do |ue|%>
+        <h5>Event: <%= ue.event.title%></h5>
+        <h5> Hours: <%= ue.hours %> </h5>
+        <% end %> -->
+      </div>
+      <div class="hrs_total">
+        <h5>Total: <%= current_user.hours %> hours </h5>
+      </div>
     </div>
-  <H4>Total: <%= current_user.hours %> hours </h4>
-</div>
 
-  </div>
-  <div class="col-xs-6">
-    <div class="panel panel-default">
-      <div class="panel-body">
-    <p>What am I doing?</p>
-    <% @user_events.each do |ue|%>
-      <p>I completed <%= ue.event.title%>. </p>
-      <h5> Hours: <%= ue.hours %> </h5>
-    <% end %>
+    <div class="col-xs-6">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Accomplishments</h4>
+          <% @user_events.each do |ue|%>
+          <p>I completed <%= ue.event.title%>. </p>
+          <h5> Hours: <%= ue.hours %> </h5>
+          <% end %>
+        </div>
+      </div>
     </div>
-
-
-  </div>
-</div>
-  </div>
+    <div class="col-xs-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h4>Popular Events</h4>
+        </div>
+      </div>
+    </div>
+<
+<!-- row 3 -->
+<div class="row">
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
-    <p>Follow</p>
-  </div>
-</div>
-
-  </div>
-</div>
-<!-- row 3 -->
-<div class="row">
-  <div class="col-xs-3 col-xs-offset-9">
-    <div class="panel panel-default">
-      <div class="panel-body">
-    <p>Popular events</p>
-  </div>
-</div>
-
+        <h4>Follow</h4>
+      </div>
+    </div>
   </div>
 </div>

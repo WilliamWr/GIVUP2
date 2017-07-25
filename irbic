@@ -1,0 +1,14 @@
+begin
+  require 'wirble'
+
+  Wirble.init
+  Wirble.colorize
+rescue LoadError => e
+  puts "Couldn't load wirble: #{e.message}"
+end
+
+begin
+  Hirb.enable
+rescue => e
+  puts "Couldn't load HIRB: #{e.message}"
+end
