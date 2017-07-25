@@ -52,9 +52,9 @@
         <td><%= event.start %></td>
         <td><%= event.end %></td>
         <td><%= event.address %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', event, class:"btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_event_path(event), class:"btn btn-info" %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info" %></td>
         <% unless event.user_events.map(&:user_id).include?(current_user.id) %>
           <td><%= link_to 'Join', join_path(user_id: current_user.id, event_id: event.id),method: :post %></td>
         <% end %>
@@ -64,6 +64,5 @@
 </table>
 
 <br>
-<% if current_user.admin? %>
+
 <%= link_to 'New Event', new_event_path %>
-<% end %>

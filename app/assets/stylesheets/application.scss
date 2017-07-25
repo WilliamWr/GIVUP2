@@ -19,6 +19,26 @@
 body {
   background-color: lightblue;
 }
+
+td, th {
+    padding: 10px;
+}
+
+/////profile page/////
+.hrs_title {
+  text-align: center;
+}
+
+.hrs_total {
+  text-align: center;
+}
+
+.jumbotron {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+////////////////////
+
 #givup {
 	width: 481px;
 	height: 195px;
@@ -76,7 +96,6 @@ input[type=submit]{
 }
 
 .combined-shape {
-
 	background-color: rgba(95, 97, 117, 0.69);
 	box-shadow: 0 0 25px 0 rgba(58, 75, 120, 0.78), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
 }
