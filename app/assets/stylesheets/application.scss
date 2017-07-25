@@ -38,6 +38,10 @@ body {
 	font-size: 174px;
 }
 
+#misclinks{
+  color: white;
+}
+
 input[type=submit]{
   border: 0;
   color: white;
@@ -51,17 +55,25 @@ input[type=submit]{
 }
 
 .input {
-  /* Rectangle 2: */
+  /* Field: */
   width: 297px;
 	height: 42px;
   margin: 0 auto;
   background: #FFFFFF;
   border: 1px solid #979797;
-  /* Username: */
+  /* Text: */
   font-family: PTSans-Caption;
   font-size: 20px;
   color: rgba(0,0,0,0.50);
   }
+
+  .field-remember{
+    color: white;
+  }
+
+.misclinks{
+  color: white;
+}
 
 .combined-shape {
 
