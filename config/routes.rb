@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   resources :events
+  # resources :users do
+  #   member do
+  #     get :following, :followers
+  #   end
+  # end
+  resources :relationships
+
   root 'pages#index'
 
   get '/explore' => 'events#explore'
@@ -18,6 +25,7 @@ Rails.application.routes.draw do
   devise_for :users,  :controllers => { :registrations => "registrations" } do
     # match "orgnew", to: "pages#orgnew", via: [:get, :post]
   end
+
 
   devise_scope :user do
     get '/orgnew' => "pages#orgnew"
