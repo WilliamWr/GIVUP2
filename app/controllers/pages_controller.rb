@@ -9,6 +9,11 @@ class PagesController < ApplicationController
   def orgnew
   end
 
+  def search
+    @users = User.where("username like ? ", params[:username])
+
+  end
+
   def profile
     if (User.find_by_username(params[:id]))
       @username = params[:id]
