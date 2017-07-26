@@ -10,7 +10,20 @@ class PagesController < ApplicationController
   end
 
   def search
-    @users = User.where("username like ? ", params[:username])
+    @users = User.where("username like ? ", "%#{params[:username].chomp.strip}%")
+    @cats = Event.where("title like ? ", "%#{params[:username].chomp.strip}%")
+
+    if User.all.count == @users.length
+      @users = []
+    end
+
+    if Event.all.count == @cats.length
+      @cats = []
+    end
+
+
+
+
 
   end
 
