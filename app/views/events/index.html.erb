@@ -1,7 +1,7 @@
-<%= form_tag(events_path, method: :get) do %>
+<!-- <%= form_tag(events_path, method: :get) do %>
  <%= text_field_tag :term, params[:term] %>
  <%= submit_tag 'Search', name: nil %>
-<% end %>
+<% end %> -->
 <table>
    <thead>
      <tr>
@@ -9,26 +9,26 @@
      </tr>
    </thead>
 
-   <tbody>
+   <!-- <tbody>
      <tr>
        <% for event in @events %>
        <td><%= event.description %></td>
       <td><%= event.start %></td>
       <td><%= event.end %></td>
-         <div class='events'>
+         <div class='events'> -->
            <!-- <%#= event%> -->
-             <strong> <%= event['title'] %> </strong>
+             <!-- <strong> <%= event['title'] %> </strong> -->
 
-         </div>
+         <!-- </div> -->
          <%#= link_to 'Edit', edit_task_path(task) %>
-       <% end %>
+       <!-- <% end %> -->
        <!-- <td><%#= event.description %></td>
       <td><%#= event.start %></td>
       <td><%#= event.end %></td> -->
-      </tr>
-   </tbody>
- </table>
-<p id="notice"><%= notice %></p>
+      <!-- </tr> -->
+   <!-- </tbody> -->
+ <!-- </table> -->
+<!-- <p id="notice"><%= notice %></p> -->
 
 <h1>Events</h1>
 

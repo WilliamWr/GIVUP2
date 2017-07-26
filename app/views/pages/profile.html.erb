@@ -19,10 +19,10 @@
       <div class="panel-body">
 
         <%= User.find_by_username(params[:id]).username %>
-    <% @user_events.each do |ue|%>
+    <!-- <% @user_events.each do |ue|%>
       <h5>Event: <%= ue.event.title%></h5>
       <h5> Hours: <%= ue.hours %> </h5>
-    <% end %>
+    <% end %> -->
 
         <div class="hrs_title">
           <h4>Achieved Hours</h4>
@@ -39,16 +39,22 @@
 
     </div>
   </div>
+
+    <div class="center">
     <div class="col-xs-6">
       <div class="panel panel-default">
         <div class="panel-body">
-          <h4>Accomplishments</h4>
           <% @user_events.each do |ue|%>
+          <h4>Accomplishments</h4>
+
           <p>I completed <%= ue.event.title%>. </p>
           <h5> Hours: <%= ue.hours %> </h5>
           <% end %>
         </div>
       </div>
+    </div>
+
+    
     </div>
     <div class="col-xs-3">
       <div class="panel panel-default">
