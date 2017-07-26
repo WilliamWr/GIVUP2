@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get '/followers' => 'pages#follower'
+
   get '/explore' => 'events#explore'
   get '/create' => 'events#index'
   get '/home' => 'pages#home'

@@ -72,7 +72,7 @@
 
         <h4>Followers</h4>
         <!-- <h5><%= current_user.followers.count  %></h5> -->
-        <%= link_to User.find_by_username(params[:id]).followers.count %>
+        <%= link_to User.find_by_username(params[:id]).followers.count, "/followers?username=#{params[:id]}" %>
 
 
 
