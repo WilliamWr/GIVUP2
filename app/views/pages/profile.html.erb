@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    
+
     </div>
     <div class="col-xs-3">
       <div class="panel panel-default">
@@ -72,11 +72,14 @@
 
         <h4>Followers</h4>
         <!-- <h5><%= current_user.followers.count  %></h5> -->
-        <%= User.find_by_username(params[:id]).followers.count %>
+        <%= link_to User.find_by_username(params[:id]).followers.count %>
 
 
 
-        <h4>Follow</h4>
+        <h4>Following</h4>
+        <%= link_to User.find_by_username(params[:id]).following.count %>
+
+
         <%= render "components/follow_button", :user => User.find_by_username(params[:id]) %>
       </div>
     </div>
