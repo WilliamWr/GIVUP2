@@ -20,6 +20,7 @@ body {
   background: linear-gradient(-180deg, (rgba(19,0,255,0.23) 0%, rgba(0,0,0,0.23) 100%)
   ),
   url(https://image.ibb.co/covykQ/zcs5ja6.jpg) no-repeat center center fixed;
+   background-attachment: fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -31,10 +32,11 @@ body {
    height: 100%;
 }
 
-#layout{
+.container {
   background: rgba(95,97,117,0.75);
   box-shadow: 0 0 25px 0 rgba(58,75,120,0.78), inset 0 1px 3px 0 rgba(0,0,0,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
-}
+  min-height: 100vh;
+  }
 
 #footer {
     clear: both;
@@ -138,16 +140,23 @@ input[type=submit]{
     color: white;
   }
 
+  .navbar-default {
+      background: linear-gradient(to bottom, #000066 0%, #333399 100%);
+      border-color: #1c1951;
+  }
 
 
 .combined-shape {
+  float: right;
+  width: 500px;
+  height: 600px;
 	background-color: rgba(95, 97, 117, 0.69);
 	box-shadow: 0 0 25px 0 rgba(58, 75, 120, 0.78), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
 }
 
 #myFooter {
 	background-color: #491d3c;
-  // opacity: 0.8;
+  // opacity: 0.9;
 	color:white;
 }
 
@@ -240,11 +249,11 @@ html{
 }
 
 
-.content{
-	flex: 1 0 auto;
-	-webkit-flex: 1 0 auto;
-	min-height: 200px;
-}
+// .content{
+// 	flex: 1 0 auto;
+// 	-webkit-flex: 1 0 auto;
+// 	min-height: 200px;
+// }
 
 #myFooter{
 	flex: 0 0 auto;
