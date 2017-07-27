@@ -4,7 +4,9 @@
     <div class="jumbotron">
 
       <!-- <%= current_user.username %> -->
+
       <%= User.find_by_username(params[:id]).username %>
+
       <!-- <%= render "components/follow_button", :user => User.find_by_username(params[:id]) %> -->
        <!-- <h3><%= current_user.username %></h3> -->
 
@@ -19,11 +21,11 @@
     <div class="panel panel-default">
       <div class="panel-body">
 
-    <h4><%= current_user.username %></h4>
-    <% @user_events.each do |ue|%>
+        <%= User.find_by_username(params[:id]).username %>
+    <!-- <% @user_events.each do |ue|%>
       <h5>Event: <%= ue.event.title%></h5>
       <h5> Hours: <%= ue.hours %> </h5>
-    <% end %>
+    <% end %> -->
 
         <div class="hrs_title">
           <h4>Achieved Hours</h4>
@@ -40,16 +42,22 @@
 
     </div>
   </div>
+
+    <div class="center">
     <div class="col-xs-6">
       <div class="panel panel-default">
         <div class="panel-body">
-          <h4>Accomplishments</h4>
           <% @user_events.each do |ue|%>
+          <h4>Accomplishments</h4>
+
           <p>I completed <%= ue.event.title%>. </p>
           <h5> Hours: <%= ue.hours %> </h5>
           <% end %>
         </div>
       </div>
+    </div>
+
+
     </div>
     <div class="col-xs-3">
       <div class="panel panel-default">
@@ -66,8 +74,15 @@
       <div class="panel-body">
 
         <h4>Followers</h4>
-        <h5><%= current_user.followers.count if current_user %></h5>
-        <h4>Follow</h4>
+
+        <!-- <h5><%= current_user.followers.count  %></h5> -->
+        <%= link_to User.find_by_username(params[:id]).followers.count, "/followers?username=#{params[:id]}" %>
+
+
+
+        <h4>Following</h4>
+        <%= link_to User.find_by_username(params[:id]).following.count %>
+
         <%= render "components/follow_button", :user => User.find_by_username(params[:id]) %>
       </div>
     </div>

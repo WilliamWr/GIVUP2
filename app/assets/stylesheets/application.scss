@@ -23,8 +23,50 @@
 
 ////////////////
 body {
-  background-color: lightblue;
+  background: linear-gradient(-180deg, (rgba(19,0,255,0.23) 0%, rgba(0,0,0,0.23) 100%)
+  ),
+  url(https://image.ibb.co/covykQ/zcs5ja6.jpg) no-repeat center center fixed;
+   background-attachment: fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   display: flex;
+   display: -webkit-flex;
+   flex-direction: column;
+   -webkit-flex-direction: column;
+   height: 100%;
 }
+
+.container {
+  background: rgba(95,97,117,0.75);
+  box-shadow: 0 0 25px 0 rgba(58,75,120,0.78), inset 0 1px 3px 0 rgba(0,0,0,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
+  min-height: 100vh;
+  }
+
+#footer {
+    clear: both;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+    display: block;
+    background-color: blue;
+
+}
+
+#bottom {
+  position: absolute;
+bottom: 20px;
+left: 141px;
+z-index: 80;
+width: 100%;
+line-height: 12px;
+display: block;
+background-color: blue;
+}
+
 
 td, th {
     padding: 10px;
@@ -99,6 +141,8 @@ input[type=submit]{
 	background-color: #4f94c1;
 }
 
+
+
 .form {
   text-align: center
 }
@@ -107,24 +151,136 @@ input[type=submit]{
   /* Field: */
   width: 297px;
 	height: 42px;
-  margin: 0 auto;
+  margin-bottom: 10px;
   background: #FFFFFF;
   border: 1px solid #979797;
   /* Text: */
   font-family: PTSans-Caption;
   font-size: 20px;
   color: rgba(0,0,0,0.50);
+  padding: 10px;
   }
 
   .field-remember{
     color: white;
   }
 
-.misclinks{
-  color: white;
-}
+  .navbar-default {
+      background: linear-gradient(to bottom, #000066 0%, #333399 100%);
+      border-color: #1c1951;
+  }
+
 
 .combined-shape {
+  float: right;
+  width: 500px;
+  height: 600px;
 	background-color: rgba(95, 97, 117, 0.69);
 	box-shadow: 0 0 25px 0 rgba(58, 75, 120, 0.78), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5), inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+#myFooter {
+	background-color: #491d3c;
+  // opacity: 0.9;
+	color:white;
+}
+
+#myFooter .footer-copyright{
+	background-color: #302a2e;
+	padding-top:3px;
+	padding-bottom:3px;
+	text-align: center;
+}
+
+#myFooter .footer-copyright p{
+	margin:10px;
+	color: #ccc;
+}
+
+#myFooter ul{
+	list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+
+}
+
+#myFooter h5{
+	font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a{
+	color:#d2d1d1;
+	text-decoration: none;
+}
+
+#myFooter a:hover, #myFooter a:focus{
+	text-decoration: none;
+	color:white;
+}
+
+#myFooter .myCols{
+	text-align: center;
+}
+
+#myFooter .social-networks{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 38px;
+}
+
+#myFooter .social-networks a{
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover{
+	text-decoration: none;
+
+}
+
+#myFooter .facebook:hover{
+	color:#0077e2;
+}
+
+#myFooter .google:hover{
+	color:#ef1a1a;
+}
+
+#myFooter .twitter:hover{
+	color: #00aced;
+}
+
+@media screen and (max-width: 767px){
+	#myFooter {
+		text-align: center;
+	}
+}
+
+
+
+/* CSS used for positioning the footers at the bottom of the page. */
+/* You can remove this. */
+
+
+html{
+	height: 100% !important;
+}
+
+
+// .content{
+// 	flex: 1 0 auto;
+// 	-webkit-flex: 1 0 auto;
+// 	min-height: 200px;
+// }
+
+#myFooter{
+	flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
 }

@@ -1,0 +1,12 @@
+
+<% if @users.present? %>
+<%  @users.each do |user| %>
+  <p><%= link_to user.username, "/user/#{user.username}" %></p>
+<% end %>
+<% elsif @cats.present? %>
+<% @cats.each do |event| %>
+<p><%= link_to event.title, event %></p>
+<% end %>
+<% else %>
+ <p>no results</p>
+ <% end %>

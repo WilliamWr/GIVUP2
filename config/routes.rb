@@ -9,10 +9,12 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
+  get '/followers' => 'pages#follower'
+
   get '/explore' => 'events#explore'
   get '/create' => 'events#index'
   get '/home' => 'pages#home'
-
+  get '/search' => 'pages#search'
   post '/join' => 'events#join', as: :join
   post '/verified_hours' => 'events#verified_hours', as: :verified_hours
 
