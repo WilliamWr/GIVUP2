@@ -86,7 +86,7 @@
 
 
         <h4>Following</h4>
-        <%= link_to User.find_by_username(params[:id]).following.count %>
+        <%= link_to User.find_by_username(params[:id]).following.count, "/following?username=#{params[:id]}" %>
 
         <%= render "components/follow_button", :user => User.find_by_username(params[:id]) %>
       </div>
