@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GIVUP2</title>
+    <title>GIVUP</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="app/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="app/assets/css/main.css" rel="stylesheet">
+
+    <!-- Fonts from Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
@@ -29,60 +43,23 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %> -->
 
-
-<div class="container" align="center">
-
-    <%= yield %>
-</div>
-<!-- <div class="content">
-</div> -->
+    <!-- <div class="container"> -->
+  <%= yield %>
+    </div>
     <footer id="myFooter">
-        <div id="container">
-            <div class="row">
-                <div class="col-sm-3 myCols">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 myCols">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 myCols">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 myCols">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="social-networks">
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></a>
-            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
-        </div>
-        <div class="footer-copyright">
-            <p>© 2017 Copyright Text </p>
-        </div>
-    </footer>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+         <div class="container">
+             <ul>
+                 <li><a href="#">Company Information</a></li>
+                 <li><a href="#">Contact us</a></li>
+                 <li><a href="#">Reviews</a></li>
+                 <li><a href="#">Terms of service</a></li>
+             </ul>
+         <p class="footer-copyright">© 2016 Copyright Text</p>
+         </div>
+         <div class="footer-social">
+             <a href="#" class="social-icons"><i class="fa fa-facebook"></i></a>
+             <a href="#" class="social-icons"><i class="fa fa-google-plus"></i></a>
+             <a href="#" class="social-icons"><i class="fa fa-twitter"></i></a>
+         </div>
   </body>
 </html>

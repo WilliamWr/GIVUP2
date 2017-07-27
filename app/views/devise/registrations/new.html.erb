@@ -1,6 +1,233 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="<%= asset_path( 'bootstrap.css' ) %>" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="<%= asset_path( 'main.css' ) %>" rel="stylesheet">
+
+  <!-- Fonts from Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+<div id="headerwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h1>Give up your time and feel fufilled,
+            helping out your community.</h1>
+
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+
+              <div class="field">
+                <%= f.text_field :username, autofocus: true, class: "input", placeholder: "Username" %>
+              </div>
+
+              <div class="field">
+                <%= f.email_field :email, autofocus: true, class: "input", placeholder:"Email" %>
+              </div>
+
+              <div class="field">
+                <!-- <%= f.label :password %> -->
+                <% if @minimum_password_length %>
+                <!-- <em>(<%= @minimum_password_length %> characters minimum)</em> -->
+                <% end %>
+                <%= f.password_field :password, autocomplete: "off", class: "input", placeholder:"Password" %>
+              </div>
+
+              <div class="field">
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: "input", placeholder:"Confirm Password" %>
+              </div>
+
+              <div class="actions">
+                <%= f.submit "Sign up" %>
+              </div>
+              <div class="actions">
+                <a href=""></a>
+              </div>
+            <% end %>
+
+            <%= render "devise/shared/links" %> -->
+
+
+
+
+
+
+
+
+					<!-- <form class="form-inline" role="form">
+					  <div class="form-group">
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
+					  </div>
+					  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
+					</form> -->
+				</div><!-- /col-lg-6 -->
+				<div class="col-lg-6">
+					<img class="img-responsive" src="<%= asset_path( '003-people.svg' ) %>" alt="">
+				</div><!-- /col-lg-6 -->
+
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+
+
+	<div class="container">
+
+		<div class="row mt centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h1>Community Service <br/>Made Fun.</h1>
+			</div>
+		</div><!-- /row -->
+
+		<div class="row mt centered">
+			<div class="col-lg-4">
+				<img src="<%= asset_path( '001-game.svg' ) %>" width="180" alt="">
+				<h4>Level Up</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<img src="<%= asset_path( '002-user.svg' ) %>" width="180" alt="">
+				<h4>Friends and Followers</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<img src="<%= asset_path( '004-mountain.svg' ) %>" width="180" alt="">
+				<h4>Gain the Most Points</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+
+			</div><!--/col-lg-4 -->
+		</div><!-- /row -->
+	</div><!-- /container -->
+
+	<div class="container">
+		<hr>
+		<div class="row centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<form class="form-inline" role="form">
+				  <div class="form-group">
+				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
+				  </div>
+				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
+				</form>
+			</div>
+			<div class="col-lg-3"></div>
+		</div><!-- /row -->
+		<hr>
+	</div><!-- /container -->
+
+	<div class="container">
+		<div class="row mt centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h1>Events Near You!</h1>
+				<h3>Browse through community service events in your area! Join your neighbors and be a Doer.</h3>
+			</div>
+		</div><!-- /row -->
+
+		<! -- CAROUSEL -->
+		<div class="row mt centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner">
+				    <div class="item active">
+				      <img src="<%= asset_path( 'p01.png' ) %>" alt="">
+				    </div>
+				    <div class="item">
+				      <img src="<%= asset_path( 'p02.png' ) %>" alt="">
+				    </div>
+				    <div class="item">
+				      <img src="<%= asset_path( 'p03.png' ) %>" alt="">
+				    </div>
+				  </div>
+				</div>
+			</div><!-- /col-lg-8 -->
+		</div><!-- /row -->
+	</div><! --/container -->
+
+			<div class="col-lg-3"></div>
+		</div><!-- /row -->
+		<hr>
+	</div><!-- /container -->
+
+	<div class="container">
+		<div class="row mt centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h1>Our Awesome Team.<br/>GivUp Team.</h1>
+				<h3>Text here describing us, or maybe testimonials.</h3>
+			</div>
+		</div><!-- /row -->
+
+		<div class="row mt centered">
+			<div class="col-lg-4">
+				<img class="img-circle" src="<%= asset_path( 'WilliamWright.jpg' ) %>" width="140" alt="">
+				<h4>William Wright</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<img class="img-circle" src="<%= asset_path( 'ChristopherBarcia.jpg' ) %>" width="140" alt="">
+				<h4>Chris Barcia</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<img class="img-circle" src="<%= asset_path( 'LucasDaSilva.jpg' ) %>" width="140" alt="">
+				<h4>Lucas Da Silva</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
+				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+			</div><!--/col-lg-4 -->
+		</div><!-- /row -->
+	</div><!-- /container -->
+
+	<!-- <div class="container">
+		<hr>
+		<div class="row centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<form class="form-inline" role="form">
+				  <div class="form-group">
+				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
+				  </div>
+				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
+				</form>
+			</div>
+			<div class="col-lg-3"></div>
+		</div><!-- /row --> -->
+		<hr>
+	</div><!-- /container -->
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="<%= asset_path( 'bootstrap.min.js' ) %>"></script>
+
+
 <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<!-- <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
@@ -34,7 +261,11 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "devise/shared/links" %> -->
+
+
+
+
 <!-- <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
