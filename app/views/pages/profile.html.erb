@@ -1,22 +1,26 @@
 <!-- row 1 -->
-<div class="row">
+<!-- <div class="row">
   <div class="col-xs-12">
-    <div class="jumbotron">
+    <div class="jumbotron"> -->
 
       <!-- <%= current_user.username %> -->
 
-      <%= User.find_by_username(params[:id]).username %>
+      <!-- <%= User.find_by_username(params[:id]).username %> -->
 
       <!-- <%= render "components/follow_button", :user => User.find_by_username(params[:id]) %> -->
        <!-- <h3><%= current_user.username %></h3> -->
 
-    </div>
+    <!-- </div>
   </div>
+</div> -->
+<div class="jumbotron">
+  <h2 class="display-3"><%= User.find_by_username(params[:id]).username %></h2>
 </div>
+
 
 <!-- row 2 -->
 
-<div class="row">
+<!-- <div class="row"> -->
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
@@ -66,9 +70,9 @@
         </div>
       </div>
     </div>
-</div>
+<!-- </div> -->
 <!-- row 3 -->
-<div class="row">
+<!-- <div class="row"> -->
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
@@ -87,4 +91,4 @@
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
