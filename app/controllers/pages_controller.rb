@@ -5,6 +5,12 @@ class PagesController < ApplicationController
   def home
     @user_events = current_user.events
   end
+  def follower
+    @followers = User.find_by_username(params[:username]).followers
+  end
+  def following
+
+  end
 
   def orgnew
   end

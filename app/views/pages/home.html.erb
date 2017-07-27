@@ -1,46 +1,50 @@
-<div class="row">
+<!-- <div class="row"> -->
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
     <p>stats</p>
     </div>
-</div>
-
+    </div>
   </div>
   <div class="col-xs-6">
     <div class="panel panel-default">
       <div class="panel-body">
-    <p>feed</p>
-  </div>
-</div>
+        <p>feed</p>
+      </div>
+    </div>
   </div>
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
-    <p>about</p>
+        <p>about</p>
+      </div>
+    </div>
   </div>
-</div>
-
-  </div>
-</div>
 <!-- row 2 -->
-<div class="row">
+<!-- <div class="row"> -->
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
-    <p>Popular events</p>
+        <p>Popular events</p>
+      </div>
+    </div>
   </div>
-</div>
-
-  </div>
-</div>
-
+<!-- </div> -->
+<div class="col-xs-6">
+  <div class="panel panel-default">
+    <div class="panel-body">
 <% @user_events.includes(:user_events).each do |event| %>
   <h4>Event <strong><%= event.title %></strong></h4>
-  <% event.user_events.each do |ue| %>
-    username: <strong><%= ue.user.username %></strong>
-    <%=  link_to 'Accept',  verified_hours_path(event_id: event.id, user_id: ue.user.id), method: :post %>
-
+  <ul class="list-group">
+    <li class="list-group-item">
+      <% event.user_events.each do |ue| %>
+      <p>username: <strong><%= ue.user.username %></strong></p>
+      <p><%=  link_to 'Accept',  verified_hours_path(event_id: event.id, user_id: ue.user.id), method: :post %></p>
+    </li>
+  </ul>
   <%end%>
-  <hr>
 <%end %>
+<hr>
+</div>
+</div>
+</div>
