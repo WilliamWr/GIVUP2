@@ -75,37 +75,27 @@ td, th {
   padding-bottom: 10px;
 }
 
-input[type=submit] {
+input.btn.btn-primary[type=submit] {
   width: 100% !important;
 }
 /////events page/////
 .container {
     width: 80%;
 }
+.bg-faded {
+  background-color: #3498db;
+	border-color: transparent;
+  font-weight: 500;
+}
 
+.navbar-light .navbar-brand{
+  color: white;
+}
 
 .navbar-default .navbar-brand {
   font-weight: 500;
 }
 
-#givup {
-	width: 481px;
-	height: 195px;
-  margin: 0 auto;
-	font-family: lazer84;
-	font-size: 144px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: normal;
-	letter-spacing: normal;
-	color: #fd2ec4;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#givup .text-style-1 {
-	font-size: 174px;
-}
 
 #misclinks{
   color: white;
