@@ -55,16 +55,23 @@ class EventsController < ApplicationController
     event = Event.find_by(id: params[:event_id])
     user_event = UserEvent.where(user_id: user.id, event_id: event.id).first
 
+
     hours = event.end - event.start
     # hours = Time.at(hours).strftime("%H:%M:%S").split(":")[0]
     hours = hours / 3600
+    
     user_event.hours = hours.to_i
     user_event.save
+
 
     user.is_verified = true
     user.hours = user.hours.to_i + hours.to_i
     user.save
+
+
     redirect_to "/user/#{user.username}"
+
+
   end
 
   # POST /events

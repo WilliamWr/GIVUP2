@@ -27,19 +27,19 @@
       <div class="panel-body">
 
         <%= User.find_by_username(params[:id]).username %>
-    <!-- <% @user_events.each do |ue|%>
-      <h5>Event: <%= ue.event.title%></h5>
-      <h5> Hours: <%= ue.hours %> </h5>
-    <% end %> -->
+    <!-- <%# @user_events.each do |ue|%>
+      <h5>Event: <%#= ue.event.title%></h5>
+      <h5> Hours: <%#= ue.hours %> </h5>
+    <%# end %> -->
 
         <div class="hrs_title">
           <h4>Achieved Hours</h4>
         </div>
-        <!-- <h4><%= current_user.username %></h4>
-        <% @user_events.each do |ue|%>
-        <h5>Event: <%= ue.event.title%></h5>
-        <h5> Hours: <%= ue.hours %> </h5>
-        <% end %> -->
+        <!-- <h4><%#= current_user.username %></h4>
+        <%# @user_events.each do |ue|%>
+        <h5>Event: <%#= ue.event.title%></h5>
+        <h5> Hours: <%#= ue.hours %> </h5>
+        <%# end %> -->
       </div>
       <div class="hrs_total">
         <h5>Total: <%= current_user.hours %> hours </h5>
@@ -53,10 +53,12 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <% @user_events.each do |ue|%>
-          <h4>Accomplishments</h4>
+          <% if ue.event.present? %>
+          <h4><%= current_user.username %></h4>
 
           <p>I completed <%= ue.event.title%>. </p>
           <h5> Hours: <%= ue.hours %> </h5>
+          <% end %>
           <% end %>
         </div>
       </div>
@@ -86,7 +88,7 @@
 
 
         <h4>Following</h4>
-        <%= link_to User.find_by_username(params[:id]).following.count %>
+        <%= link_to User.find_by_username(params[:id]).following.count, "/following?username=#{params[:id]}" %>
 
         <%= render "components/follow_button", :user => User.find_by_username(params[:id]) %>
       </div>

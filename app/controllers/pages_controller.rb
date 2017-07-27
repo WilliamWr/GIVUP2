@@ -8,8 +8,9 @@ class PagesController < ApplicationController
   def follower
     @followers = User.find_by_username(params[:username]).followers
   end
-  def following
 
+  def following
+    @following = User.find_by_username(params[:username]).following
   end
 
   def orgnew
