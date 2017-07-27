@@ -16,6 +16,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/////nav-bar/////
+.alert {
+  margin-bottom: 0px;
+}
+
+////////////////
 body {
   background: linear-gradient(-180deg, (rgba(19,0,255,0.23) 0%, rgba(0,0,0,0.23) 100%)
   ),
@@ -83,8 +89,27 @@ td, th {
 input[type=submit] {
   width: 100% !important;
 }
-////////////////////
+/////events page/////
+.container {
+    width: 80%;
+}
 
+.carousel-control.left{
+  background: transparent;
+}
+
+.carousel-control.right{
+  background: transparent;
+}
+
+.event_header{
+  color: white;
+}
+
+.card-img-top {
+  width: 100%;
+}
+//////////
 #givup {
 	width: 481px;
 	height: 195px;
