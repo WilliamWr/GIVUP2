@@ -76,6 +76,7 @@
 
 <div class="card-deck">
   <% @events.each do |event| %>
+  <div class="col-sm-4">
     <div class="card">
       <%= link_to event do  %>
       <img class="card-img-top" src="http://www.bluecc.edu/Home/ShowImage?id=1268&t=635518118421430000" alt="Card image cap">
@@ -103,6 +104,7 @@
         <small class="text-muted"><%= time_ago_in_words(event.updated_at) %></small>
       </div>
     </div>
+  </div>
   <% end %>
   <!-- <div class="card">
     <img class="card-img-top" src="..." alt="Card image cap">
@@ -128,5 +130,5 @@
 
 <br>
 <% if current_user.admin? %>
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'New Event', new_event_path, class:"btn btn-info" %>
 <% end %>

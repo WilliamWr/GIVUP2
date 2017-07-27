@@ -35,13 +35,13 @@ body {
    display: -webkit-flex;
    flex-direction: column;
    -webkit-flex-direction: column;
-   height: 100%;
 }
 
 .container {
   background: rgba(95,97,117,0.75);
   box-shadow: 0 0 25px 0 rgba(58,75,120,0.78), inset 0 1px 3px 0 rgba(0,0,0,0.50), inset 0 1px 3px 0 rgba(0,0,0,0.50);
   min-height: 100vh;
+  padding-top: 1%;
   }
 
 #footer {
@@ -94,21 +94,6 @@ input[type=submit] {
     width: 80%;
 }
 
-.carousel-control.left{
-  background: transparent;
-}
-
-.carousel-control.right{
-  background: transparent;
-}
-
-.event_header{
-  color: white;
-}
-
-.card-img-top {
-  width: 100%;
-}
 //////////
 #givup {
 	width: 481px;
