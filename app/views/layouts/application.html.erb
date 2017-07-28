@@ -47,9 +47,8 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %> -->
 
-    <div class="container">
-  <%= yield %>
-
+  <div class="<%= (controller.controller_name == 'registrations' and controller.action_name == 'new')  ? nil : 'container' %>">
+    <%= yield %>
 
     </div>
     <footer id="myFooter">
