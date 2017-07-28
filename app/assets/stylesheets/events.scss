@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .carousel-inner{
-  padding-top: 1%;
+  padding-top: 0;
 }
 
 .carousel-control.left{
@@ -15,8 +15,12 @@
 }
 
 .event_header{
-  color: white;
+    font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #333;
 }
+
 
 .card-img-top {
   width: 100%;
