@@ -46,7 +46,7 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %> -->
-<div class="container">
+
 
   <div class="<%= (controller.controller_name == 'registrations' and controller.action_name == 'new')  ? nil : 'container' %>">
     <%= yield %>
