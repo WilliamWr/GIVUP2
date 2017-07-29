@@ -42,7 +42,11 @@
         <%# end %> -->
       </div>
       <div class="hrs_total">
-        <h5>Total: <%= current_user.hours %> hours </h5>
+        <% user = User.find_by_username(params[:id])%>
+        <h5>Total: <%= user.hours %> hours </h5>
+      </div>
+      <div>
+        Level: <%= UserEvent.where(user_id: user.id).map(&:level).compact.inject(:+) %>
       </div>
 
     </div>
