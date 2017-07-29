@@ -94,6 +94,7 @@ input.btn{
   font-weight: 500;
 }
 
+/////nav_bar/////
 .navbar-light .navbar-brand{
   color: white;
 }
@@ -102,6 +103,26 @@ input.btn{
   font-weight: 500;
 }
 
+.navbar-brand{
+  width: 120%;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  padding-right: 0px !important;
+}
+
+.navbar-default {
+    background: #3498DB;
+    border-color: #3498DB;
+}
+
+////////////////
+
+/////header/////
+
+#headerwrap{
+  padding-top: 25px !important;
+}
+///////////////
 
 #misclinks{
   color: white;
@@ -139,10 +160,6 @@ input[type=submit]{
     color: white;
   }
 
-  .navbar-default {
-      background: #3498DB;
-      border-color: #3498DB;
-  }
 
 
   #myFooter{
