@@ -54,11 +54,14 @@
   </div>
 
     <div class="center">
+      
     <div class="col-xs-6">
       <div class="panel panel-default">
         <div class="panel-body">
+          <% if !@user_events.present? %>
           <h4>Hi <%= User.find_by_username(params[:id]).username %>, thanks for joining!</h4>
           <h4>Join events, complete them, and compete</h4>
+          <% end %>
 
 
           <% @user_events.each do |ue|%>
@@ -85,7 +88,7 @@
         <div class="panel-body">
           <!-- <img src="http://www.krux.com/upload/image/company/diagram-events-funnels.png" style="width: 70%; alt=""> -->
           <h4>My Events</h4>
-          <% @user_events.each do |x| %>
+          <% @user_events.take(3).each do |x| %>
           <% if x.event.present? %>
           <p><%= link_to x.event.title %></p>
           <% end %>
