@@ -1,32 +1,29 @@
 
 <h2>Sign up As an Organizer</h2>
+<div class="bodycontent">
 <h3>Create events</h3>
 <h3>Validate user status</h3>
 
-<%= form_for(User.new, as: User.new, url: registration_path(User.new)) do |f| %>
+  <%= form_for(User.new, as: User.new, url: registration_path(User.new)) do |f| %>
   <%#= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
+    <%= f.text_field :username, autofocus: true, class: "input", placeholder: "Username"   %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: "input", placeholder: "Email"  %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "off", class: "input", placeholder: "Password"  %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "input", placeholder: "Password Confirmation"   %>
   </div>
 
   <%= hidden_field_tag "user[admin]", true%>
@@ -35,5 +32,5 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
+</div>
 <%#= render "devise/shared/links" %>
