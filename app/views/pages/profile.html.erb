@@ -59,7 +59,7 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <h3>Hi <%= current_user.username %>, welcome to GIVUP!</h3>
-      
+
           <% @user_events.each do |ue|%>
           <% if ue.event.present? %>
           <h4><%= current_user.username %></h4>
@@ -78,6 +78,11 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <h4>Popular Events</h4>
+         
+
+
+
+
         </div>
       </div>
     </div>
