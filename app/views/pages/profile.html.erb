@@ -25,15 +25,17 @@
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
+        <img src="http://res.rankedgaming.com/resources/images/profile/default-avatar-male.png" style="width: 50%;" class="profile" alt="">
 
-        <%= User.find_by_username(params[:id]).username %>
+        <h4><%= User.find_by_username(params[:id]).username %></h4>
     <!-- <%# @user_events.each do |ue|%>
       <h5>Event: <%#= ue.event.title%></h5>
       <h5> Hours: <%#= ue.hours %> </h5>
     <%# end %> -->
 
         <div class="hrs_title">
-          <h4>Achieved Hours</h4>
+
+
         </div>
         <!-- <h4><%#= current_user.username %></h4>
         <%# @user_events.each do |ue|%>
@@ -43,7 +45,7 @@
       </div>
       <div class="hrs_total">
         <% user = User.find_by_username(params[:id])%>
-        <h5>Total: <%= user.hours %> hours </h5>
+        <h5>Total Hours: <%= user.hours %></h5>
       </div>
       <div>
         Level: <%= UserEvent.where(user_id: user.id).map(&:level).compact.inject(:+) %>
@@ -56,9 +58,8 @@
     <div class="col-xs-6">
       <div class="panel panel-default">
         <div class="panel-body">
-          <h3>Hi <%= current_user.username %> welcome to GIVUP!</h3>
-          <p> Join events, complete them, and compete against friends. </p>
-          <p> After you complete an event have a verifier award you points. </p>
+          <h3>Hi <%= current_user.username %>, welcome to GIVUP!</h3>
+      
           <% @user_events.each do |ue|%>
           <% if ue.event.present? %>
           <h4><%= current_user.username %></h4>
