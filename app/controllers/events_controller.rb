@@ -59,10 +59,30 @@ class EventsController < ApplicationController
     hours = event.end - event.start
     # hours = Time.at(hours).strftime("%H:%M:%S").split(":")[0]
     hours = hours / 3600
-    
-    user_event.hours = hours.to_i
-    user_event.save
+    points = hours * 100
+    if user_event.points.nil?
+      user_event.points = 0
+    end
+    if user_event.level.nil?
+      user_event.level = 0
+    end
 
+    user_event.points += points
+    if user_event.points >= 500
+      user_event.level += 1
+    elsif user_event.points >= 1000
+      user_event.level += 1
+    elsif user_event.points >= 1500
+      user_event.level += 1
+    elsif user_event.points >= 2000
+      user_event.level += 1
+    elsif user_event.points >= 2500
+      user_event.level += 1
+    else
+      user_event.level += 0
+    end
+    user_event.hours = hours.to_i
+    user_event.save!
 
     user.is_verified = true
     user.hours = user.hours.to_i + hours.to_i

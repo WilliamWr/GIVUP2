@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724220858) do
+ActiveRecord::Schema.define(version: 20170729004015) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20170724220858) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "hours"
+    t.integer "level"
+    t.integer "points"
   end
 
   create_table "users", force: :cascade do |t|
