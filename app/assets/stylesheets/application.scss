@@ -63,7 +63,7 @@ td, th {
 .jumbotron {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #ffc472;
+  background-image: #ffffff;
 }
 
 input.btn.btn-primary[type=submit] {
@@ -252,3 +252,7 @@ width: 90%;
   #myFooter .fa-twitter:focus{
       color:#00aced;
   }
+.profile {
+  border-radius: 50%;
+  align-items: center;
+}
