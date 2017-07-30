@@ -123,6 +123,11 @@ input.btn{
 }
 ///////////////
 
+/////sign_up_page//////
+.btn-submit{
+  padding: 9px 16px !important;
+}
+//////////////////////
 #misclinks{
   color: white;
 }
@@ -256,5 +261,9 @@ width: 90%;
   }
 .profile {
   border-radius: 50%;
-  align-items: center;
+
+}
+
+.jumbotron {
+  background-image: url("");
 }

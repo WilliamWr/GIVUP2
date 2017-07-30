@@ -8,6 +8,9 @@ class PagesController < ApplicationController
 
 
   end
+  def profile
+    @events = Event.all
+  end
 
   def home
     @user_events = current_user.events

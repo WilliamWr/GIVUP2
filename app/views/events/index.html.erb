@@ -73,14 +73,15 @@
       <%end%>
       <!-- <%= link_to 'Show', event, class:"btn btn-info" %> -->
       <div class="card-block">
-        <h4 class="card-title"><%= event.title %></h4>
+        <h4 class="card-title"><strong><%= event.title %></strong><p class="descript"><%= event.description %></p></h4>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><%= event.description %></li>
-        <li class="list-group-item"><%= event.start %> - <%= event.end %></li>
-        <li class="list-group-item"><%= event.address %></li>
+        <!-- <li class="list-group-item"><%= event.description %></li> -->
+        <li class="list-group-item"><h5><strong>Date & Time</strong></h5><%= event.start.strftime("%b %e, %Y") %> - <%= event.end.strftime("%b %e, %Y") %><p><%= event.start.strftime("%I:%M %p") %> - <%= event.end.strftime("%I:%M %p") %></p></li>
+        <!-- <li class="list-group-item"><h5><strong>Time</strong></h5><%= event.start.strftime("%I:%M %p") %> - <%= event.end.strftime("%I:%M %p") %></li> -->
+        <li class="list-group-item"><h5><strong>Address</strong></h5><%= event.address %></li>
       </ul>
-      <div class="card-block">
+      <div class="card-block join">
         <p class="card-text">
           <!-- <%= link_to 'Show', event, class:"btn btn-info" %> -->
           <% if current_user.admin? %>
