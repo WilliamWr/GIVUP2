@@ -121,11 +121,34 @@ input.btn{
 #headerwrap{
   padding-top: 25px !important;
 }
-///////////////
+//////log_in_page//////
+#login_btn{
+  border-radius: 5px;
+}
 
 /////sign_up_page//////
 .btn-submit{
   padding: 9px 16px !important;
+}
+
+.btn.btn-warning.btn-lg.btn-sign-up{
+  width: 297px!important;
+}
+
+#user_username.input {
+  border-radius: 5px;
+}
+
+#user_email.input {
+  border-radius: 5px;
+}
+
+#user_password.input {
+  border-radius: 5px;
+}
+
+#user_password_confirmation.input {
+  border-radius: 5px;
 }
 //////////////////////
 #misclinks{
@@ -173,7 +196,7 @@ width: 90%;
     color: white;
   }
 
-  
+
 
 
     a {
