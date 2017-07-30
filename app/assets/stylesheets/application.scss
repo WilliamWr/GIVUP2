@@ -24,19 +24,8 @@
 ////////////////
 body {
   background-color: #f2f2f2;
-  // background: linear-gradient(-180deg, (rgba(19,0,255,0.23) 0%, rgba(0,0,0,0.23) 100%)
-  // ),
-  // url(https://image.ibb.co/covykQ/zcs5ja6.jpg) no-repeat center center fixed;
-  //  background-attachment: fixed;
-  //  -webkit-background-size: cover;
-  //  -moz-background-size: cover;
-  //  -o-background-size: cover;
-  //  background-size: cover;
-  //  display: flex;
-  //  display: -webkit-flex;
-  //  flex-direction: column;
-  //  -webkit-flex-direction: column;
-  //  height: 100%;
+  font-family: 'Lato', sans-serif;
+  height: 100%;
 
 }
 
@@ -74,7 +63,7 @@ td, th {
 .jumbotron {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #ffc472;
+  background-image: #ffffff;
 }
 
 input.btn.btn-primary[type=submit] {
@@ -84,6 +73,12 @@ input.btn.btn-primary[type=submit] {
 input.btn{
   width: 100% !important;
 }
+
+.login {
+  color: white;
+  font-weight: 500;
+}
+
 /////events page/////
 .container {
     width: 80%;
@@ -115,6 +110,10 @@ input.btn{
     border-color: #3498DB;
 }
 
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open>.nav-link {
+  color: white;
+}
+
 ////////////////
 
 /////header/////
@@ -141,6 +140,15 @@ input[type=submit]{
 	background-color: #4f94c1;
 }
 
+.panel-body {
+margin: 0 auto;
+width: 90%;
+}
+
+.panel {
+  text-align: center;
+  margin-bottom: 100px;
+}
 
 
 .form {
@@ -161,10 +169,14 @@ input[type=submit]{
   padding: 10px;
   }
 
-  .field-remember{
+  .field-remember {
     color: white;
   }
 
+
+    a {
+      text-decoration: none;
+    }
 
 
   #myFooter{
@@ -245,3 +257,11 @@ input[type=submit]{
   #myFooter .fa-twitter:focus{
       color:#00aced;
   }
+.profile {
+  border-radius: 50%;
+
+}
+
+.jumbotron {
+  background-image: url("");
+}

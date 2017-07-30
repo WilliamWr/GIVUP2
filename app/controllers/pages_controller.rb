@@ -2,9 +2,14 @@ class PagesController < ApplicationController
   def index
     if !current_user.present?
       redirect_to "/users/sign_up"
+    else
+      redirect_to "/create"
     end
 
 
+  end
+  def profile
+    @events = Event.all
   end
 
   def home

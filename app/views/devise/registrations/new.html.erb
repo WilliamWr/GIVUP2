@@ -9,8 +9,6 @@
 
   <!-- Bootstrap core CSS -->
   <link href="<%= asset_path( 'bootstrap.css' ) %>" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="<%= asset_path( 'main.css' ) %>" rel="stylesheet">
 
   <!-- Fonts from Google Fonts -->
@@ -60,8 +58,9 @@
               </div>
             <% end %>
 
-            <%= render "devise/shared/links"%>
 
+          <a href= 'sign_in'>Already a user? Log In here!</a>
+              <!-- <%= render "devise/shared/links" %> -->
 
 
 
@@ -204,101 +203,8 @@
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
 	</div><!-- /container -->
-
-	<!-- <div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>
-			</div>
-			<div class="col-lg-3"></div>
-		</div> --><!-- /row -->
 		<hr>
 	</div><!-- /container -->
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="<%= asset_path( 'bootstrap.min.js' ) %>"></script>
-
-
-<!-- <h2>Sign up</h2> -->
-
-<!-- <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-  <div class="actions">
-    <a href=""></a>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %> -->
-
-
-
-
-<!-- <h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <%= hidden_field_tag :admin, true%>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %> -->
