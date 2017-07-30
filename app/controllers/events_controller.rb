@@ -98,9 +98,14 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-
+    if event_params[:address].present?
+      cords = Geocoder.coordinates(event_params[:address])
+      @event.latitude = cords[0]
+      @event.longitude = cords[1]
+    end
     respond_to do |format|
       if @event.save
+
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
@@ -115,6 +120,12 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
+        if event_params[:address].present?
+          cords = Geocoder.coordinates(event_params[:address])
+          @event.latitude = cords[0]
+          @event.longitude = cords[1]
+          @event.save!
+        end
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
         format.json { render :show, status: :ok, location: @event }
       else

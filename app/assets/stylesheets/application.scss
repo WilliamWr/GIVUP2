@@ -140,6 +140,15 @@ input[type=submit]{
 	background-color: #4f94c1;
 }
 
+.input2[type=submit]{
+  border: 0;
+  font-size: 25px;
+  color: white;
+  width: 297px;
+  height: 42px;
+  background-color: #a0d755;
+}
+
 .panel-body {
 margin: 0 auto;
 width: 90%;
@@ -173,10 +182,10 @@ width: 90%;
     color: white;
   }
 
+  .signin {
+    margin-left: 45px;
+  }
 
-    a {
-      text-decoration: none;
-    }
 
 
   #myFooter{
