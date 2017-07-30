@@ -3,34 +3,43 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Start:</strong>
-  <%= @event.start %>
-</p>
-
-<p>
-  <strong>End:</strong>
-  <%= @event.end %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <span class="address" data-address="<%= {lat: @event.latitude, lng: @event.longitude }.to_json %>" data-title="<%= @event.title %>">
-    <%= @event.address %>
-  </span>
-</p>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %>
-<%= link_to 'Back', events_path %>
-</div>
+<div class="card-deck">
+
+  <div class="col-sm-4">
+    <div class="card">
+
+      <img class="card-img-top" src="https://i.imgur.com/AMf9X7E.jpg" alt="Card image cap">
+
+      <div class="card-block">
+        <h4 class="card-title"><strong><%= @event.title %></strong><p class="descript"><%= @event.description %></p></h4>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h5><strong>Date & Time</strong></h5><%= @event.start.strftime("%b %e, %Y") %> - <%= @event.end.strftime("%b %e, %Y") %><p><%= @event.start.strftime("%I:%M %p") %> - <%= @event.end.strftime("%I:%M %p") %></p></li>
+        <li class="list-group-item"><h5><strong>Address</strong></h5><%= @event.address %></li>
+      </ul>
+      <div class="card-block join">
+        <p class="card-text">
+
+          <% if current_user.admin? %>
+          <%= link_to 'Edit', edit_event_path(@event), class:"btn btn-info" %>
+          <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info" %>
+          <% unless @event.user_events.map(&:user_id).include?(current_user.id) %>
+          <%= link_to 'Join', join_path(user_id: current_user.id, event_id: event.id),method: :post, class:"btn btn-info" %>
+          <% end %>
+          <% else %>
+          <center>
+          <% unless @event.user_events.map(&:user_id).include?(current_user.id) %>
+          <%= link_to 'Join', join_path(user_id: current_user.id, event_id: @event.id),method: :post, class:"btn btn-info" %>
+          <% end %>
+          <% end %>
+          </center>
+
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"><%= time_ago_in_words(@event.updated_at) %></small>
+      </div>
+    </div>
+  </div>
