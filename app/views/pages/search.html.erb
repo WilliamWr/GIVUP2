@@ -1,11 +1,62 @@
 
 <% if @users.present? %>
 <%  @users.each do |user| %>
-  <p><%= link_to user.username, "/user/#{user.username}" %></p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card5">
+ <img src="http://res.rankedgaming.com/resources/images/profile/default-avatar-male.png" alt="John" style="width:100%">
+ <div class="container5">
+   <h1><%= link_to user.username, "/user/#{user.username}" %></h1>
+   <p class="title5">CEO & Founder, Example</p>
+
+   <p><button class="button5">Contact</button></p>
+ </div>
+</div>
 <% end %>
 <% elsif @cats.present? %>
 <% @cats.each do |event| %>
-<p><%= link_to event.title, event %></p>
+<div class="card-deck">
+
+  <div class="col-sm-4">
+    <div class="card">
+      <%= link_to event do  %>
+      <img class="card-img-top" src="https://i.imgur.com/AMf9X7E.jpg" alt="Card image cap">
+
+      <!-- <%= link_to 'Show', event, class:"btn btn-info" %> -->
+      <div class="card-block">
+        <h4 class="card-title"><strong><p><%= link_to event.title, event %></p></strong><p class="descript"><%= event.description %></p></h4>
+      </div>
+      <ul class="list-group list-group-flush">
+        <!-- <li class="list-group-item"><%= event.description %></li> -->
+        <li class="list-group-item"><h5><strong>Date & Time</strong></h5><%= event.start.strftime("%b %e, %Y") %> - <%= event.end.strftime("%b %e, %Y") %><p><%= event.start.strftime("%I:%M %p") %> - <%= event.end.strftime("%I:%M %p") %></p></li>
+        <!-- <li class="list-group-item"><h5><strong>Time</strong></h5><%= event.start.strftime("%I:%M %p") %> - <%= event.end.strftime("%I:%M %p") %></li> -->
+        <li class="list-group-item"><h5><strong>Address</strong></h5><%= event.address %></li>
+      </ul>
+      <div class="card-block join">
+        <p class="card-text">
+          <!-- <%= link_to 'Show', event, class:"btn btn-info" %> -->
+          <% if current_user.admin? %>
+          <%= link_to 'Edit', edit_event_path(event), class:"btn btn-info" %>
+          <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info" %>
+          <% unless event.user_events.map(&:user_id).include?(current_user.id) %>
+          <%= link_to 'Join', join_path(user_id: current_user.id, event_id: event.id),method: :post, class:"btn btn-info" %>
+          <% end %>
+          <% else %>
+          <center>
+          <% unless event.user_events.map(&:user_id).include?(current_user.id) %>
+          <%= link_to 'Join', join_path(user_id: current_user.id, event_id: event.id),method: :post, class:"btn btn-info" %>
+          <% end %>
+          <% end %>
+          </center>
+
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"><%= time_ago_in_words(event.updated_at) %></small>
+      </div>
+    </div>
+  </div>
+  <% end %>
 <% end %>
 <% else %>
  <p>no results</p>
