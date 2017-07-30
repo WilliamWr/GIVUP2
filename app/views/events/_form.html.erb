@@ -12,13 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :event_title %>
+    <!-- <%= form.label :title %> -->
+    <%= form.text_field :title, id: :event_title, class: "input", placeholder:"Title"%>
+
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :event_description %>
+    <!-- <%= form.label :description %> -->
+    <%= form.text_field :description, id: :event_description, class: "input", placeholder:"Description" %>
   </div>
 
   <div class="field">
@@ -31,9 +32,12 @@
     <%= form.datetime_select :end, id: :event_end %>
   </div>
 
+  <!-- <input type="text" class='datepicker' > -->
+
+
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :event_address %>
+    <!-- <%= form.label :address %> -->
+    <%= form.text_field :address, id: :event_address, class: "input", placeholder:"Address" %>
   </div>
 
   <div class="actions">
