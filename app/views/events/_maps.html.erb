@@ -34,17 +34,19 @@
           zoom: 17
         });
         infoWindow = new google.maps.InfoWindow;
+        var address = $(".address").data().address;
+
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
+              lat: address.lat ? address.lat : position.coords.latitude,
+              lng: address.lng ? address.lng : position.coords.longitude
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent($('[data-title]').data('title'));
             infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
@@ -65,7 +67,7 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiznVE2NpLcz3itmryNKMDIEUdTsJ8iek&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_KEY'] %>&callback=initMap">
     </script>
   </body>
 </html>

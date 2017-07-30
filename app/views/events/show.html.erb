@@ -25,7 +25,9 @@
 
 <p>
   <strong>Address:</strong>
-  <%= @event.address %>
+  <span class="address" data-address="<%= {lat: @event.latitude, lng: @event.longitude }.to_json %>" data-title="<%= @event.title %>">
+    <%= @event.address %>
+  </span>
 </p>
 
 
