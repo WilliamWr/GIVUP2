@@ -51,7 +51,9 @@
               </div>
 
               <div class="actions">
-                <%= f.submit "Sign up", class: "btn btn-warning btn-lg btn-sign-up" %>
+
+                <%= f.submit "Sign up", class: "input2" %>
+
               </div>
               <div class="actions">
                 <a href=""></a>
@@ -59,7 +61,7 @@
             <% end %>
 
 
-          <a href= 'sign_in'>Already a user? Log In here!</a>
+        <strong><a href= 'sign_in', class='signin'>Already a user? Log In here!</a></strong>
               <!-- <%= render "devise/shared/links" %> -->
 
 
@@ -153,13 +155,13 @@
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner">
 				    <div class="item active">
-				      <img src="<%= asset_path( 'p01.png' ) %>" alt="">
+				      <img src="<%= asset_path( 'p01.png' ) %>" alt="" class='homeimg' >
 				    </div>
 				    <div class="item">
-				      <img src="<%= asset_path( 'p02.png' ) %>" alt="">
+				      <img src="<%= asset_path( 'p02.png' ) %>" alt="" class='homeimg' >
 				    </div>
 				    <div class="item">
-				      <img src="<%= asset_path( 'p03.png' ) %>" alt="">
+				      <img src="<%= asset_path( 'p03.png' ) %>" alt="" class='homeimg' >
 				    </div>
 				  </div>
 				</div>

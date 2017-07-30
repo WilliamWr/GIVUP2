@@ -80,6 +80,7 @@ GEM
       rest-client (~> 1.4)
     execjs (2.7.0)
     ffi (1.9.18)
+    geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashie (3.5.6)
@@ -222,6 +223,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   eventbrite
+  geocoder
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
