@@ -54,7 +54,7 @@
   </div>
 
     <div class="center">
-      
+
     <div class="col-xs-6">
       <div class="panel panel-default">
         <div class="panel-body">
@@ -87,7 +87,7 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <!-- <img src="http://www.krux.com/upload/image/company/diagram-events-funnels.png" style="width: 70%; alt=""> -->
-          <h4>My Events</h4>
+          <h4>Current Events</h4>
           <% @user_events.take(3).each do |x| %>
           <% if x.event.present? %>
           <p><%= link_to x.event.title %></p>
