@@ -1,0 +1,20 @@
+<% if ue.event.present? %>
+  <h4 class="blue"><%= User.find_by_username(params[:id]).username %></h4>
+  <% userevent = User.find_by(params[:event]) %>
+  <p>I'm going to <%= link_to ue.event.title %>. </p>
+
+  <% if ue.hours.present? %>
+    <h5> Completed Hours: <%= ue.hours %>   </h5>
+  <% end %>
+
+  <% if ue.hours.present? %>
+    <img src="https://vignette1.wikia.nocookie.net/crashban/images/b/ba/Crash_Nitro_Kart_Green_Gem.png/revision/latest/scale-to-width-down/185?cb=20170520002854" style="width: 10%;" alt="">
+  <% end %>
+<% end %>
+
+
+
+<% @user_events.take(3).each do |x| %>
+  <% if x.event.present? %>
+    <p><%= link_to x.event.title %></p>
+  <% end %>

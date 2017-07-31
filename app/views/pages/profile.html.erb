@@ -62,23 +62,31 @@
 
 
           <% if !@user_events.present? %>
-          <h4>Hi <%= User.find_by_username(params[:id]).username %>, thanks for joining!</h4>
-          <h4>Join events, complete them, and compete</h4>
+            <h4>Hi <%= User.find_by_username(params[:id]).username %>, thanks for joining!</h4>
+            <h4>Join events, complete them, and compete</h4>
           <% end %>
-          <% @user_events.each do |ue|%>
-          <% if ue.event.present? %>
+
           <h4 class="blue"><%= User.find_by_username(params[:id]).username %></h4>
-          <% userevent = User.find_by(params[:event]) %>
-          <p>I'm going to <%= link_to ue.event.title %>. </p>
-          <% if ue.hours.present? %>
-          <h5> Completed Hours: <%= ue.hours %>   </h5>
+
+          <% @user_events.each do |ue|%>
+            <% puts ue.title %>
+            <p>I'm going to <%= link_to ue.title %>. </p>
+            <% if ue.hours(@user_id) > 0 %>
+              <h5> Completed Hours: <%= ue.hours(@user_id) %>   </h5>
+              <img src="https://vignette1.wikia.nocookie.net/crashban/images/b/ba/Crash_Nitro_Kart_Green_Gem.png/revision/latest/scale-to-width-down/185?cb=20170520002854" style="width: 10%;" alt="">
+            <% end %>
           <% end %>
-            <% if ue.hours.present? %>
-          <img src="https://vignette1.wikia.nocookie.net/crashban/images/b/ba/Crash_Nitro_Kart_Green_Gem.png/revision/latest/scale-to-width-down/185?cb=20170520002854" style="width: 10%;" alt="">
-          <% end %>
-          <% end %>
-          <% end %>
-          
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,9 +105,8 @@
           <!-- <img src="http://www.krux.com/upload/image/company/diagram-events-funnels.png" style="width: 70%; alt=""> -->
           <h4>Current Events</h4>
           <% @user_events.take(3).each do |x| %>
-          <% if x.event.present? %>
-          <p><%= link_to x.event.title %></p>
-          <% end %>
+              <p><%= link_to x.title %></p>
+
           <% end %>
 
         </div>

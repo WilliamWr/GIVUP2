@@ -1,3 +1,13 @@
+
 <% @followers.each do |show| %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card5">
+  <img src="http://res.rankedgaming.com/resources/images/profile/default-avatar-male.png" alt="John" style="width:100%">
+  <div class="container5">
 <p><%= link_to show.username, "/user/#{show.username}"%> </p>
+<p><button class="button5">Contact</button></p>
+</div>
+</div>
+
 <% end %>
