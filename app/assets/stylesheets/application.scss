@@ -22,11 +22,14 @@
 }
 
 ////////////////
+*{
+  font-family: 'Lato', sans-serif!important;
+}
+
 body {
   background-color: #f2f2f2;
   font-family: 'Lato', sans-serif;
   height: 100%;
-
 }
 
 
@@ -35,6 +38,7 @@ body {
   display: block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 4px;
+  margin-top: 30px;
   margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: #fff;
@@ -45,6 +49,10 @@ body {
   -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
   height: 100%;
+}
+
+#login_btn {
+  font-size: 25px;
 }
 
 td, th {
@@ -89,6 +97,9 @@ input.btn{
   font-weight: 500;
 }
 
+.panelne{
+  margin-left: 32%!important;
+}
 /////nav_bar/////
 .navbar-light .navbar-brand{
   color: white;
@@ -199,7 +210,7 @@ width: 90%;
 }
 
 .panelne {
-margin-left: 280px;
+margin-left: 310px;
 display: inline-block;
 padding: 30px 30px 30px 30px;
 text-align: center;
@@ -246,7 +257,7 @@ margin-bottom: 100px;
 
 
   #myFooter{
-      padding-top:32px;
+      padding-top:150px;
   }
 
   #myFooter .container{
