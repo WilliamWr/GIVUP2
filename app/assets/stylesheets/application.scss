@@ -22,11 +22,14 @@
 }
 
 ////////////////
+*{
+  font-family: 'Lato', sans-serif!important;
+}
+
 body {
   background-color: #f2f2f2;
   font-family: 'Lato', sans-serif;
   height: 100%;
-
 }
 
 
@@ -94,6 +97,9 @@ input.btn{
   font-weight: 500;
 }
 
+.panelne{
+  margin-left: 32%!important;
+}
 /////nav_bar/////
 .navbar-light .navbar-brand{
   color: white;
@@ -104,7 +110,7 @@ input.btn{
 }
 
 .navbar-brand{
-  width: 120%;
+  width: 50%;
   padding-top: 6px !important;
   padding-bottom: 6px !important;
   padding-right: 0px !important;
@@ -119,7 +125,14 @@ input.btn{
   color: white;
 }
 
-////////////////
+.alert.alert-success{
+padding-top: 6px;
+padding-bottom: 6px;
+margin-bottom: 10px;
+border-top-width: 0px;
+margin-top: 10px;
+margin-left: 110px;
+}
 
 /////header/////
 
@@ -155,7 +168,16 @@ input.btn{
 #user_password_confirmation.input {
   border-radius: 5px;
 }
-//////////////////////
+//////attendance_page//////
+.title_brks{
+  border-top: 3px solid #3498db;
+}
+
+.user_att{
+  padding-right: 10px;
+}
+
+//////////////////////////
 #misclinks{
   color: white;
 }
@@ -318,7 +340,8 @@ margin-bottom: 100px;
 }
 
 .jumbotron {
-  background-image: url("");
+  background-image: url("https://www.joshmorony.com/wp-content/uploads/2016/04/mountains-mid2.png");
+  padding-bottom: 98px;
 }
 
 
@@ -370,7 +393,6 @@ button:hover, a:hover {
 .white {
   color: white;
 
-
 }
 .rank {
 
@@ -384,7 +406,12 @@ button:hover, a:hover {
 
 .left {
   text-align: left;
+
 }
 .blue {
   color: blue;
+}
+
+.bigger {
+  font-size: 20px;
 }
