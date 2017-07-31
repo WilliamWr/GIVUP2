@@ -1,50 +1,49 @@
 <!-- <div class="row"> -->
-  <div class="col-xs-3">
-    <div class="panel panel-default">
-      <div class="panel-body">
-    <p>stats</p>
-    </div>
-    </div>
-  </div>
-  <div class="col-xs-6">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p>feed</p>
-      </div>
+<!-- <div class="col-xs-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>stats</p>
     </div>
   </div>
-  <div class="col-xs-3">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p>about</p>
-      </div>
-    </div>
-  </div>
-<!-- row 2 -->
-<!-- <div class="row"> -->
-  <div class="col-xs-3">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p>Popular events</p>
-      </div>
-    </div>
-  </div>
-<!-- </div> -->
+</div>
 <div class="col-xs-6">
   <div class="panel panel-default">
     <div class="panel-body">
-<% @user_events.includes(:user_events).each do |event| %>
-  <h4>Event <strong><%= event.title %></strong></h4>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <% event.user_events.each do |ue| %>
-      <p>username: <strong><%= ue.user.username %></strong></p>
-      <p><%=  link_to 'Accept',  verified_hours_path(event_id: event.id, user_id: ue.user.id), method: :post %></p>
-    </li>
-  </ul>
-  <%end%>
-<%end %>
-<hr>
+      <p>feed</p>
+    </div>
+  </div>
 </div>
-</div>
+<div class="col-xs-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>about</p>
+    </div>
+  </div>
+</div> -->
+<!-- row 2 -->
+<!-- <div class="row"> -->
+<!-- <div class="col-xs-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>Popular events</p>
+    </div>
+  </div>
+</div> -->
+<!-- </div> -->
+<h2 style="text-align:center;margin-bottom:40px;">Attendance</h2>
+<div class="col-xs-6" style="width:70%;margin-left:15%;">
+  <div class="panel panel-default">
+    <!-- <div class="panel-body"> -->
+    <% @user_events.includes(:user_events).each do |event| %>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <h4><strong><%= event.title %></strong></h4>
+        <hr class="title_brks">
+        <% event.user_events.each do |ue| %>
+        <p><%= ue.user.username %> <%=  link_to 'Accept',  verified_hours_path(event_id: event.id, user_id: ue.user.id), method: :post %></p>
+      </li>
+    </ul>
+    <%end%>
+    <%end %>
+  </div>
 </div>
