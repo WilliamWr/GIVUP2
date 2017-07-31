@@ -1,0 +1,30 @@
+<center>
+<img src="https://maxcdn.icons8.com/Share/icon/Sports//leaderboard1600.png" style="width: 40%;" alt="">
+</center>
+
+<div class="rank">
+<table>
+  <tbody>
+    <tr>
+      <h3><th>Rank by Hours</th></h3>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username</th>
+
+    </tr>
+
+
+
+</tbody>
+</table>
+<div class="leader">
+
+<ol>
+
+<% @ranks.each do |show| %>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to show.username, "/user/#{show.username}"%></li>
+
+<%end%>
+</ol>
+<style type="text/scss">
+.center {text-align: center; list-style-position:inside;}
+</style>
+</div>

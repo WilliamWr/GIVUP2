@@ -23,6 +23,10 @@ class PagesController < ApplicationController
     @following = User.find_by_username(params[:username]).following
   end
 
+  def ranks
+    @ranks = User.find_by_username(params[:username]).following.order(hours: :desc)
+  end
+
   def orgnew
   end
 
