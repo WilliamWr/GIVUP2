@@ -6,8 +6,8 @@
 <table>
   <tbody>
     <tr>
-      <h3><th>Rank by Hours</th></h3>
-      <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username</th>
+      <th class="bigger">Rank Hours</th>
+      <th class="bigger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username</th>
 
     </tr>
 
@@ -17,7 +17,7 @@
 </table>
 <div class="leader">
 
-<ol>
+<ol class="bigger">
 
 <% @ranks.each do |show| %>
   <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to show.username, "/user/#{show.username}"%></li>

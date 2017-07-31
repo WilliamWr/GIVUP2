@@ -65,13 +65,11 @@
           <h4>Hi <%= User.find_by_username(params[:id]).username %>, thanks for joining!</h4>
           <h4>Join events, complete them, and compete</h4>
           <% end %>
-
-
           <% @user_events.each do |ue|%>
           <% if ue.event.present? %>
-          <h4 class="blue"><%= current_user.username %></h4>
-
-          <p>I'm going to <%= link_to ue.event.title%>. </p>
+          <h4 class="blue"><%= User.find_by_username(params[:id]).username %></h4>
+          <% userevent = User.find_by(params[:event]) %>
+          <p>I'm going to <%= link_to ue.event.title %>. </p>
           <% if ue.hours.present? %>
           <h5> Completed Hours: <%= ue.hours %>   </h5>
           <% end %>
@@ -80,10 +78,16 @@
           <% end %>
           <% end %>
           <% end %>
+          
+
+
+
+
+
         </div>
       </div>
     </div>
-  
+
 
 
     </div>
