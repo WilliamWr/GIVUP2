@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get '/followers' => 'pages#follower'
   get '/following' => 'pages#following'
 
+  get '/user/:username/ranks' => 'pages#ranks'
+
   get '/explore' => 'events#explore'
   get '/create' => 'events#index'
   get '/home' => 'pages#home'
