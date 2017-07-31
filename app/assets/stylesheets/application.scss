@@ -99,7 +99,7 @@ input.btn{
 }
 
 .navbar-brand{
-  width: 120%;
+  width: 50%;
   padding-top: 6px !important;
   padding-bottom: 6px !important;
   padding-right: 0px !important;
@@ -114,7 +114,14 @@ input.btn{
   color: white;
 }
 
-////////////////
+.alert.alert-success{
+padding-top: 6px;
+padding-bottom: 6px;
+margin-bottom: 10px;
+border-top-width: 0px;
+margin-top: 10px;
+margin-left: 110px;
+}
 
 /////header/////
 
@@ -150,7 +157,16 @@ input.btn{
 #user_password_confirmation.input {
   border-radius: 5px;
 }
-//////////////////////
+//////attendance_page//////
+.title_brks{
+  border-top: 3px solid #3498db;
+}
+
+.user_att{
+  padding-right: 10px;
+}
+
+//////////////////////////
 #misclinks{
   color: white;
 }
@@ -366,7 +382,6 @@ button:hover, a:hover {
 .white {
   color: white;
 
-
 }
 .rank {
 
@@ -380,6 +395,7 @@ button:hover, a:hover {
 
 .left {
   text-align: left;
+
 }
 .blue {
   color: blue;
