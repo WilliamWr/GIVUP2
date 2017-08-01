@@ -30,7 +30,7 @@
 </div>
 
 <div class="event_header">
-  <h1>Events</h1>
+  <center><h1>Events</h1></center>
 </div>
 
 <!-- <table> -->
@@ -129,6 +129,8 @@
 </div>
 
 <br>
-<% if current_user.admin? %>
-<%= link_to 'New Event', new_event_path, class:"btn btn-info" %>
-<% end %>
+<div id= newevent>
+  <% if current_user.admin? %>
+  <%= link_to 'New Event', new_event_path, class:"btn btn-info" %>
+  <% end %>
+</div>
