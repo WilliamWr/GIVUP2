@@ -12,7 +12,7 @@
       <%= f.password_field :password, autocomplete: "off", class: 'input', placeholder:"Password" %>
     </div>
     <div class="actions">
-      <%= f.submit "LOG IN", :id => 'login_btn'%>
+    <strong><%= f.submit "Log In", :id => 'login_btn'%></strong>
     </div>
     <% if devise_mapping.rememberable? -%>
     <div class="field-remember" style="color:#666;">

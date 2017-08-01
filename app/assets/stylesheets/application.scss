@@ -23,7 +23,7 @@
 
 ////////////////
 // *{
-//   font-family: 'Roboto', sans-serif!important;
+//   font-family: 'Lato', sans-serif!important;
 // }
 
 body {
@@ -38,6 +38,7 @@ body {
   display: block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 4px;
+  margin-top: 30px;
   margin-bottom: 20px;
   line-height: 1.42857143;
   background-color: #fff;
@@ -48,6 +49,10 @@ body {
   -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
   height: 100%;
+}
+
+#login_btn {
+  font-size: 25px;
 }
 
 td, th {
@@ -131,11 +136,11 @@ margin-left: 110px;
 
 /////header/////
 
-#headerwrap{
+#headerwrap {
   padding-top: 25px !important;
 }
 //////log_in_page//////
-#login_btn{
+#login_btn {
   border-radius: 5px;
 }
 
@@ -194,6 +199,26 @@ input[type=submit]{
   background-color: #a0d755;
 }
 
+.input3[type=submit]{
+  border: 0;
+  font-size: 17px;
+  color: white;
+  width: 297px;
+  height: 42px;
+  background-color: #4f94c1;
+}
+
+.input4[type=submit]{
+  border: 0;
+  font-size: 25px;
+  color: white;
+  width: 297px;
+  height: 42px;
+  background-color: #4f94c1;
+}
+
+
+
 .panel-body {
 margin: 0 auto;
 width: 90%;
@@ -205,10 +230,11 @@ width: 90%;
 }
 
 .panelne {
-margin-left: 280px;
+margin-left: 310px;
 display: inline-block;
 padding: 30px 30px 30px 30px;
 text-align: center;
+margin-top: 20px;
 margin-bottom: 100px;
 background-color: #ffffff;
 border: 1px solid transparent;
@@ -216,6 +242,21 @@ border-radius: 4px;
 -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 margin-bottom: 100px;
+}
+
+.panelne2 {
+  margin-top: 20px;
+  margin-left: 280px;
+  display: inline-block;
+  padding: 30px 30px 30px 30px;
+  text-align: center;
+  margin-bottom: 100px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 100px;
 }
 
 .form {
@@ -244,15 +285,23 @@ margin-bottom: 100px;
     margin-left: 45px;
   }
 
+  .orgnew {
+    margin-left: 20px;
+  }
+
 .homeimg {
   margin-left: 50px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#newevent {
+  float: right;
+  margin-right: 30px;
+}
 
 
-  #myFooter{
-      padding-top:32px;
+  #myFooter {
+      padding-top:150px;
   }
 
   #myFooter .container{

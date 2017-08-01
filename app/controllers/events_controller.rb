@@ -56,7 +56,7 @@ class EventsController < ApplicationController
     user_event = UserEvent.where(user_id: user.id, event_id: event.id).first
 
 
-    hours = event.end - event.start
+    hours = [event.end - event.start, 1].max
     # hours = Time.at(hours).strftime("%H:%M:%S").split(":")[0]
     hours = hours / 3600
     points = hours * 100

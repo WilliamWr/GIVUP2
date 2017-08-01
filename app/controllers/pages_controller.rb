@@ -53,9 +53,12 @@ class PagesController < ApplicationController
       @username = params[:id]
     else
       redirect_to root_path, :notice=> "User not found"
+    end
+    # @user_events = UserEvent.where(user_id: params[:id])
+    @user_id = User.find_by(username: params[:id]).id
+    @user_events = User.find_by(username: params[:id]).events
+
   end
-  @user_events = UserEvent.where(user_id: current_user.id)
-end
 
   def explore
   end
