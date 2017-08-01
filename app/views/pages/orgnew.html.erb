@@ -1,6 +1,6 @@
-<center><h2>Sign up As an Organizer</h2></center>
+<center><h2>Sign up as an Organizer</h2></center>
 <div class="panelne">
-<h3>Create events</h3>
+<h2>Create events</h2>
 <h3>Validate user status</h3>
 
   <%= form_for(User.new, as: User.new, url: registration_path(User.new)) do |f| %>
@@ -28,7 +28,7 @@
   <%= hidden_field_tag "user[admin]", true%>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "input4" %>
   </div>
 <% end %>
 </div>
