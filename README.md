@@ -8,7 +8,7 @@ Picture/gif uploading using paper clip bycrpt log in and sign up Creation of per
 
 Used a basic rails scaffolding implementation for the creation this app. Created a user registration - sign-in and image uploader add ins. Synopsis
 
-To learn about our Trello project management board, please click here.
+HTML, CSS, Bootstrap, Ruby, Ruby on rails, Javascript, JQuery, Sketch
 
 Resources
 
